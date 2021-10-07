@@ -18,7 +18,17 @@ public class SinglyLinkedList {
             System.out.print(current.data+"->");
             current=current.next;
         }
-        System.out.print("null");
+        System.out.println("null");
+    }
+
+    public int size(){
+        int count = 0;
+        ListNode current = head;
+        while(current!=null){
+            count++;
+            current=current.next;
+        }
+        return count;
     }
 
     public static void main(String[] args) {
@@ -32,7 +42,8 @@ public class SinglyLinkedList {
         second.next = third;
         third.next = fourth;
 
+        //ListNode current = head;
         sll.display();
-
+        System.out.println(sll.size());
     }
 }
