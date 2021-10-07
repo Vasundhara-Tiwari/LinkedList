@@ -22,6 +22,8 @@ public class SinglyLinkedList {
     }
 
     public int size(){
+        if(head == null)
+            return 0;
         int count = 0;
         ListNode current = head;
         while(current!=null){
