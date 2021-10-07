@@ -52,6 +52,16 @@ public class SinglyLinkedList {
         current.next=newNode;
     }
 
+    public ListNode deleteFirst(){
+        if(head==null){
+            return null;
+        }
+        ListNode temp = head;
+        head=head.next;
+        temp.next=null;
+        return temp;
+    }
+
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.head = new ListNode(10);
@@ -81,5 +91,8 @@ public class SinglyLinkedList {
         sll2.insertAtEnd(10);
         System.out.println("After insertion at end of the singly linked list");
         sll2.display();
+
+        System.out.println("Deleting the first node");
+        System.out.println(sll2.deleteFirst().data);
     }
 }
