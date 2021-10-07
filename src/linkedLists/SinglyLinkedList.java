@@ -39,6 +39,19 @@ public class SinglyLinkedList {
         head = newNode;
     }
 
+    public void insertAtEnd(int value){
+        ListNode newNode = new ListNode(value);
+        if(head == null){
+            head=newNode;
+            return;
+        }
+        ListNode current = head;
+        while (current.next!=null){
+            current=current.next;
+        }
+        current.next=newNode;
+    }
+
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.head = new ListNode(10);
@@ -65,6 +78,8 @@ public class SinglyLinkedList {
         System.out.println("Linked list 2:");
         sll2.display();
 
-
+        sll2.insertAtEnd(10);
+        System.out.println("After insertion at end of the singly linked list");
+        sll2.display();
     }
 }
