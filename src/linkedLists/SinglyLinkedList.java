@@ -22,5 +22,13 @@ public class SinglyLinkedList {
         sll.head.next = second;
         second.next = third;
         third.next = fourth;
+
+
+        ListNode current = sll.head;
+        while(current!=null){
+            System.out.print(current.data+"->");
+            current=current.next;
+        }
+        System.out.print("null");
     }
 }
