@@ -51,10 +51,20 @@ public class SinglyLinkedList {
         third.next = fourth;
 
         //ListNode current = head;
+        System.out.println("Linked list 1:");
         sll.display();
         System.out.println(sll.size());
         sll.insertAtBeginning(5);
         sll.insertAtBeginning(20);
         sll.display();
+
+        SinglyLinkedList sll2 = new SinglyLinkedList();
+        sll2.insertAtBeginning(11);
+        sll2.insertAtBeginning(8);
+        sll2.insertAtBeginning(1);
+        System.out.println("Linked list 2:");
+        sll2.display();
+
+
     }
 }
