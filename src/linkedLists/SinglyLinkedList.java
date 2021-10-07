@@ -33,8 +33,8 @@ public class SinglyLinkedList {
         return count;
     }
 
-    public void insertAtBeginning(){
-        ListNode newNode = new ListNode(20);
+    public void insertAtBeginning(int value){
+        ListNode newNode = new ListNode(value);
         newNode.next = head;
         head = newNode;
     }
@@ -53,7 +53,8 @@ public class SinglyLinkedList {
         //ListNode current = head;
         sll.display();
         System.out.println(sll.size());
-        sll.insertAtBeginning();
+        sll.insertAtBeginning(5);
+        sll.insertAtBeginning(20);
         sll.display();
     }
 }
