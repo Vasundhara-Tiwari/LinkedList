@@ -137,5 +137,8 @@ public class SinglyLinkedList {
         System.out.println("After deletion");
         sll2.display();
 
+
+        System.out.println(sll.getNthNodeFromEnd(3).data);
+
     }
 }
