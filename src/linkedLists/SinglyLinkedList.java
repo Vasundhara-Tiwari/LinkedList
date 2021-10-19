@@ -187,5 +187,7 @@ public class SinglyLinkedList {
         sll3.removeDuplicates();
         sll3.display();
 
+        sll3.insertInSorted(3);
+        sll3.display();
     }
 }
