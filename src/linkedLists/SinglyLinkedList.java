@@ -100,6 +100,20 @@ public class SinglyLinkedList {
         return mainPtr;
     }
 
+    public void removeDuplicates(){
+        if(head == null)
+            return;
+        ListNode current = head;
+        while (current!=null && current.next!=null){
+            if(current.data==current.next.data){
+                current.next=current.next.next;
+            }
+            else {
+                current=current.next;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.head = new ListNode(10);
@@ -140,5 +154,20 @@ public class SinglyLinkedList {
 
         System.out.println(sll.getNthNodeFromEnd(3).data);
 
+
+        SinglyLinkedList sll3 = new SinglyLinkedList();
+        sll3.head = new ListNode(1);
+        ListNode s1 = new ListNode(2);
+        ListNode s2 = new ListNode(2);
+        ListNode s3 = new ListNode(3);
+        ListNode s4 = new ListNode(4);
+
+        sll3.head.next = s1;
+        s1.next = s2;
+        s2.next = s3;
+        s3.next=s4;
+        sll3.display();
+        sll3.removeDuplicates();
+        sll3.display();
     }
 }
