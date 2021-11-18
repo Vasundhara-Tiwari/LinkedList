@@ -1,6 +1,9 @@
 package linkedLists;
 
 public class DoublyLinkedList {
+    private ListNode head;
+    private ListNode tail;
+    private int length;
     private class ListNode
     {
         private int data;
