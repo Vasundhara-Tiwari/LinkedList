@@ -25,4 +25,20 @@ public class DoublyLinkedList {
     {
         return length==0;// or head==null
     }
+    public void insertAtBeginning(int value)
+    {
+        ListNode newNode=new ListNode(value);
+
+        if(isEmpty())
+        {
+            tail=newNode;
+        }
+        else
+        {
+            head.previous=newNode;
+        }
+        newNode.next=head;
+        head=newNode;
+        length++;
+    }
 }
