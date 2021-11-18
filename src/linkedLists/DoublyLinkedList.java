@@ -108,4 +108,13 @@ public class DoublyLinkedList {
         length--;
         return temp;
     }
+    public static void main(String[] args) {
+        DoublyLinkedList dll=new DoublyLinkedList();
+        dll.insertAtBeginning(1);
+        dll.insertAtBeginning(10);
+        dll.insertEnd(5);
+        dll.insertEnd(6);
+        dll.displayBackward();
+        dll.displayForward();
+    }
 }
