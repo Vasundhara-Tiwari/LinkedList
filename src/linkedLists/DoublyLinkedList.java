@@ -15,4 +15,10 @@ public class DoublyLinkedList {
             this.data=data;
         }
     }
+    public DoublyLinkedList()
+    {
+        this.head=null;
+        this.tail=null;
+        this.length=0;
+    }
 }
