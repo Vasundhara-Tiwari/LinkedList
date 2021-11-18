@@ -57,5 +57,19 @@ public class DoublyLinkedList {
         length++;
 
     }
+    public void displayForward()
+    {
+        if(head==null)
+        {
+            return;
+        }
 
+        ListNode temp=head;
+        while(temp!=null)
+        {
+            System.out.print(temp.data+"->");
+            temp=temp.next;
+        }
+        System.out.println("null");
+    }
 }
