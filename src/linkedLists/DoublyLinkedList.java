@@ -21,4 +21,8 @@ public class DoublyLinkedList {
         this.tail=null;
         this.length=0;
     }
+    public boolean isEmpty()
+    {
+        return length==0;// or head==null
+    }
 }
